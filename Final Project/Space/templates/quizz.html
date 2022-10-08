@@ -1,0 +1,119 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quizz
+{% endblock %}
+
+{% block main %}
+    <form action="/quizz" method="post" style = "height: 500px;">
+        <div class="form-group" style = "position: relative; right: 425px; height:">
+            <p class= "jumbotronQuizz">1. How many planets are in the Solar System?</p>
+            <select class="custom-select" style="width:150px;" name="q1">
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+            </select>
+            <p class= "jumbotronQuizz">2. Which planet has the most moons?</p>
+            <select class="custom-select" style="width:150px;" name="q2">
+                        <option value="Saturn">Saturn</option>
+                        <option value="Jupiter">Jupiter</option>
+                        <option value="Neptune">Neptune</option>
+                        <option value="Uranus">Uranus</option>
+                        <option value="The Sun">The Sun</option>
+
+            </select>
+            <p class= "jumbotronQuizz">3. What is the average temperature of Earth?</p>
+            <select class="custom-select" style="width:150px;" name="q3">
+                        <option value="5.5">5.5 &degC</option>
+                        <option value="8.4">8.4 &degC</option>
+                        <option value="8.5">8.5 &degC</option>
+                        <option value="14.9">14.9 &degC</option>
+                        <option value="19.0">19.0 &degC</option>
+
+            </select>
+            <p class= "jumbotronQuizz">4. What are the names of Mars' two moons?</p>
+            <select class="custom-select" style="width:150px;" name="q4">
+                        <option value="Ganymede and Titan">Ganymede and Titan</option>
+                        <option value="Io and Callisto">Io and Callisto</option>
+                        <option value="Triton and Europa">Triton and Europa</option>
+                        <option value="Epimetheus and Laomedeia">Epimetheus and Laomedeia</option>
+                        <option value="Phobos and Deimos">Phobos and Deimos</option>
+
+            </select>
+            <p class= "jumbotronQuizz">5. What is a "sol day" in regards to the three Mars rovers?</p>
+            <select class="custom-select" style="width:150px;" name="q5">
+                        <option value="Number of times Mars has rotated around The Sun since the rover landed">Number of times Mars has rotated around The Sun since the rover landed</option>
+                        <option value="Number of times The Sun has rotated around Mars since the rover landed">Number of times The Sun has rotated around Mars since the rover landed</option>
+                        <option value="Number of times Mars has completed a full rotation around its own axis since the rover landed">Number of times Mars has completed a full rotation around its own axis since the rover landed</option>
+                        <option value="Number of times Mars has completed one rotation around The Sun's axis since the rover landed">Number of times Mars has completed one rotation around The Sun's axis since the rover landed</option>
+                        <option value="Number of Earth days since the rover landed">Number of Earth days since the rover landed</option>
+
+            </select>
+        </div>
+        <div class="form-group" style = "position: relative; bottom: 530px; left: 425px;">
+            <p class= "jumbotronQuizz">6. Does Curiosity have a Miniature Thermal Emission Spectrometer?</p>
+            <select class="custom-select" style="width:150px;" name="q6">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+
+            </select>
+            <p class= "jumbotronQuizz">7. Which planet is closest to The Sun?</p>
+            <select class="custom-select" style="width:150px;" name="q7">
+                        <option value="Mercury">Mercury</option>
+                        <option value="Venus">Venus</option>
+                        <option value="Earth">Earth</option>
+                        <option value="Mars">Mars</option>
+                        <option value="Jupiter">Jupiter</option>
+
+            </select>
+            <p class= "jumbotronQuizz">8. Which of these makes Venus stand out?</p>
+            <select class="custom-select" style="width:150px;" name="q8">
+                        <option value="It is the hottest planet">It is the hottest planet</option>
+                        <option value="It is the smallest planet">It is the smallest planet</option>
+                        <option value="It has the same day length as Earth">It has the same day length as Earth</option>
+                        <option value="It is tidally locked with the Sun">It is tidally locked with the Sun</option>
+                        <option value="Its oxygen-rich atmopshere">Its oxygen-rich atmopshere</option>
+
+            </select>
+            <p class= "jumbotronQuizz">9. How many moons does Pluto have?</p>
+            <select class="custom-select" style="width:150px;" name="q9">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+
+            </select>
+            <p class= "jumbotronQuizz">10. What is the name of the rover from which weather data is generated?</p>
+            <select class="custom-select" style="width:150px;" name="q10">
+                        <option value="Curiosity">Curiosity</option>
+                        <option value="Opportunity">Opportunity</option>
+                        <option value="Spirit">Spirit</option>
+                        <option value="InSight">InSight</option>
+                        <option value="Perseverance">Perseverance</option>
+
+            </select>
+        </div>
+        <div class="form-group" style = "position: relative; bottom: 500px; right: 0px;">
+            <p class= "jumbotronQuizz">Bonus. What rating would you give this website? (out of 10)</p>
+            <select class="custom-select" style="width:150px;" name="bonus">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+            </select>
+        </div>
+        <div style = 'position: absolute; bottom:100px; right: 897px;'>
+            <button class="btn btn-primary" type="submit" style = "font-size: 24pt">Submit</button>
+        </div>
+
+    </form>
+{% endblock %}

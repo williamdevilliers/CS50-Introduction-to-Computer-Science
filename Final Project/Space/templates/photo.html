@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Photo
+{% endblock %}
+
+{% block main %}
+            {% for photo in listofphotos %}
+                <img src={{ photo }}>
+            {% endfor %}
+            {% if listofphotos|length == 0 %}
+            <p>On this day, no photos were taken on this camera.</p>
+            {% endif %}
+
+{% endblock %}

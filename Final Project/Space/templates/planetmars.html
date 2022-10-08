@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Planet
+{% endblock %}
+
+{% block main %}
+            <div class= "jumbotronPlanet" {% if moons == 2 %} style="position: absolute; top: 100px;" {% endif %}>
+                <ul class= "alignMe" style = "text-align:left;">
+                    <p><b>Mass</b>{{ mass }}x10<sup>{{ massExponent }}</sup> kg</p>
+                    <p><b>Vol</b>{{ vol }}x10<sup>{{ volExponent }}</sup> km<sup>3</sup></p>
+                    <p><b>Density</b>{{ density }} g/cm<sup>3</sup></p>
+                    <p><b>Gravity</b>{{ gravity }} m/s<sup>2</sup></p>
+                    <p><b>Average Temp</b>{{ avgTemp }} &degC</p>
+                    <p><b>Moons</b>{{ moons }}</p>
+                    <form action="/moon" method="post" {% if all_moonsrel|length == 0 %} class="moon-formoff" {% endif %} style = "margin-left: 45px;">
+                        <div class="mb-3">
+                            <select class="custom-select" style="width:150px;" name="moonname">
+                                    {% for i in range(1, 1 + all_moonsrel|length) %}
+                                        {% for rel in all_moonsrel[i-1:i] %}
+                                            {% for name in all_moonsnames[i-1:i] %}
+                                                <option value={{ rel }}>{{ name }}</option>
+                                            {% endfor %}
+                                        {% endfor %}
+                                    {% endfor %}
+                            </select>
+                        </div>
+                        <button class="btn btn-primary" type="submit">To the moon</button>
+                    </form>
+                </div>
+
+            </div>
+            <div style = "position: relative; right: 400px; top: 530px; font-size: 16pt; width: 90%">Below are three forms that will retrieve pictures taken by either Curiosity, Opportunity, or Spirit. Each rover has a set number of cameras from which to choose. The input for the forms is "sol days", which equates to the number of martian days since the rover landed on Mars. As an example, if you wanted to see the photos Curiosity took on its 1000th day on Mars, enter 1000 into the left form.</div>
+            <div class = "curiosity-form">
+                <form action="/photo" method="post">
+                    <div class="form-group">
+                        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="sol" placeholder="Curiosity" type="text">
+                    </div>
+                    <div class="mb-3">
+                        <select class="custom-select" style="width:150px;" name="camera">
+                            <option value= "FHAZ">Front Hazard Avoidance Camera</option>
+                            <option value= "RHAZ">Rear Hazard Avoidance Camera</option>
+                            <option value= "MAST">Mast Camera</option>
+                            <option value= "CHEMCAM">Chemistry and Camera Complex</option>
+                            <option value= "MAHLI">Mars Hand Lens Imager</option>
+                            <option value= "MARDI">Mars Descent Imager</option>
+                            <option value= "NAVCAM">Navigation Camera</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary" type="submit" name="rover" value = "curiosity">Submit</button>
+                </form>
+            </div>
+            <div class = "opportunity-form">
+            <form action="/photo" method="post">
+                <div class="form-group">
+                    <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="sol" placeholder="Opportunity" type="text">
+                </div>
+                <div class="mb-3">
+                    <select class="custom-select" style="width:150px;" name="camera">
+                        <option value= "FHAZ">Front Hazard Avoidance Camera</option>
+                        <option value= "RHAZ">Rear Hazard Avoidance Camera</option>
+                        <option value= "NAVCAM">Navigation Camera</option>
+                        <option value= "PANCAM">Panoramic Camera</option>
+                        <option value= "MINITES">Miniature Thermal Emission Spectrometer</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary" type="submit" name="rover" value = "opportunity">Submit</button>
+            </form>
+            </div>
+            <div class = "spirit-form">
+            <form action="/photo" method="post">
+                <div class="form-group">
+                    <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="sol" placeholder="Spirit" type="text">
+                </div>
+                <div class="mb-3">
+                    <select class="custom-select" style="width:150px;" name="camera">
+                        <option value= "FHAZ">Front Hazard Avoidance Camera</option>
+                        <option value= "RHAZ">Rear Hazard Avoidance Camera</option>
+                        <option value= "NAVCAM">Navigation Camera</option>
+                        <option value= "PANCAM">Panoramic Camera</option>
+                        <option value= "MINITES">Miniature Thermal Emission Spectrometer</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary" type="submit" name="rover" value = "spirit">Submit</button>
+            </form>
+            </div>
+            <div>
+                <form action="/weather" method="post">
+                    <button class="btn btn-primary" type="submit" style = "position: absolute; right: 1175px; top: 395px;">Weather</button>
+                </form>
+            </div>
+            <img alt="Sun" class = {{ planetclass }} style = '{{ style }}' src={{ img }}>
+{% endblock %}

@@ -1,0 +1,300 @@
+nav .navbar-nav li a
+{
+    font-size: 110%;
+    color: white !important;
+}
+
+.trn
+{
+    background-image: linear-gradient(rgba(200,200,200,0.4), rgba(0,0,0,0.1));
+    z-index: 99;
+}
+
+
+.bg-light
+{
+   background-color: transparent !important;
+}
+
+
+
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+
+}
+
+/* Colors for brand */
+nav .navbar-brand .white
+{
+    color: #FFFFFF;
+}
+nav .navbar-brand .red
+{
+    color: #FF0000;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+main .form-control
+{
+    /* Center form controls */
+    display: inline-block;
+
+    /* Override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* Scroll horizontally as needed */
+    overflow-x: 100%;
+
+    /* Center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* Constrain images on small screens */
+    max-width: 100%;
+}
+
+body {
+    background-image: url("https://cdn.wallpapersafari.com/56/11/OIf0lp.jpg");
+    color: #FFFFFF;
+}
+
+.Sun
+{
+    position:absolute; right:300px; bottom:-190px; width:700px; height:550px;
+}
+
+.Venus
+{
+    position:absolute; right:750px; bottom: -15px; width:350px; height:200px;
+}
+
+.Mercury
+{
+    position:absolute; right:550px; bottom:250px; width:200px; height:200px; z-index:999 !important;
+}
+
+.Earth
+{
+    position:absolute; right:280px; bottom:-15px; width:200px; height:200px;
+}
+
+.Mars
+{
+    position:absolute; right:550px; bottom:-280px; width:200px; height:200px;
+}
+
+.Jupiter
+{
+    position:absolute; right:350px; bottom:180px; width:200px; height:200px;
+}
+
+.Saturn
+{
+    position:absolute; right:300px; bottom:-275px; width:300px; height:300px;
+}
+
+.Uranus
+{
+    position:absolute; right:750px; bottom:-200px; width:200px; height:200px;
+}
+
+.Neptune
+{
+    position:absolute; right:630px; bottom:160px; width:450px; height:220px;
+}
+
+.Pluto
+{
+    position:absolute; right:200px; bottom:400px; width:100px; height:100px;
+}
+
+
+.box {
+  position: relative;
+  width: 1000px;
+  height: 87vh;
+}
+
+.inner-box {
+  position: absolute;
+  width: 1000px;
+  top: 500px;
+  left: 300px;
+  right: 0;
+  bottom: 0;
+}
+
+.planet-form {
+    position: relative; right: 800px; top: 350px;
+}
+
+.curiosity-form {
+    position: relative; right: 400px; top: 550px;
+    width:250px;
+}
+
+.opportunity-form {
+    position: relative; right: 100px; top: 404px;
+    width:250px;
+}
+
+.spirit-form {
+    position: relative; left: 200px; top: 258px;
+    width:250px;
+}
+
+.moon-form {
+    position:relative;
+    display:none;
+}
+
+.moon-formoff {
+    display:none;
+}
+
+.jumbotron {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    margin-bottom: 2rem;
+    position: relative;
+    top: 400px;
+    right: 750px;
+    width: 60%;
+    font-size: 30px;
+    border-radius: 100px;
+}
+
+.jumbotronPlanet {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    margin-bottom: 2rem;
+    position: absolute;
+    top: 200px;
+    left: 50px;
+    right: 450px;
+    width:40%;
+    font-size: 30px;
+    border-radius: 100px;
+}
+
+.jumbotronQuizz {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+    width:75%;
+    font-size: 24px;
+    border-radius: 100px;
+    text-align: center;
+}
+
+.alignMe b {
+  display: inline-block;
+  width:60%;
+  position: relative;
+  left: 40px;
+  color: #ffffff;
+  font-size: 36px;
+}
+
+.alignMe b::after {
+  content: ":";
+  position: absolute;
+  right: 50px;
+  color: #ffffff;
+  font-size: 36px;
+}
+
+.alignM b {
+  display: inline-block;
+  width:18%;
+  position: relative;
+  left: 40px;
+  color: #ffffff;
+  font-size: 18pt;
+  margin-bottom: 0px;
+}
+
+.alignM b::after {
+  content: ":";
+  position: absolute;
+  right: 50px;
+  color: #ffffff;
+  font-size: 18pt;
+  margin-bottom: 0px;
+}
+
+@media only screen and (min-width: 361px) {
+  .box {bottom: 320px;}
+  .box {right: -400px;}
+  .box {width: 850px;}
+  .box {height: 87vh;}
+  .planet-form {position: relative; right: 920px; top: 400px;}
+
+}
+@media only screen and (max-width: 360px) {
+    main {overflow-x: auto;}
+  .inner-box {bottom: 30px;}
+  .inner-box {right: -1300px;}
+  .jumbotron {top:75px; right:425px; width: 30%; font-size: 20px}
+  .planet-form {position: relative; right: 775px; top: 75px;}
+  .box {position: relative;}
+  .box {right: -400px;}
+  .box {top: -50px;}
+  .Sun {width: 400px}
+  .Sun {height: 314px}
+  .Sun {right: 715px}
+  .Sun {bottom: 80px}
+  .Venus {width: 200px}
+  .Venus {height: 114px}
+  .Venus {right: 955px}
+  .Venus {bottom: 180px}
+  .Mercury {width: 114px}
+  .Mercury {height: 114px}
+  .Mercury {right: 860px}
+  .Mercury {bottom: 330px}
+  .Earth {width: 114px}
+  .Earth {height: 114px}
+  .Earth {right: 715px}
+  .Earth {bottom: 180px}
+  .Mars {width: 114px}
+  .Mars {height: 114px}
+  .Mars {right: 860px}
+  .Mars {bottom: 40px}
+  .Jupiter {width: 114px}
+  .Jupiter {height: 114px}
+  .Jupiter {right: 745px}
+  .Jupiter {bottom: 290px}
+  .Saturn {width: 171px}
+  .Saturn {height: 171px}
+  .Saturn {right: 710px}
+  .Saturn {bottom: 35px}
+  .Uranus {width: 114px}
+  .Uranus {height: 114px}
+  .Uranus {right: 963px}
+  .Uranus {bottom: 77px}
+  .Neptune {width: 257px}
+  .Neptune {height: 126px}
+  .Neptune {right: 895px}
+  .Neptune {bottom: 280px}
+  .Pluto {width: 57px}
+  .Pluto {height: 57px}
+  .Pluto {right: 750px}
+  .Pluto {bottom: 450px}
+}

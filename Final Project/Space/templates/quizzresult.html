@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quizz results
+{% endblock %}
+
+{% block main %}
+    <div class= "jumbotronPlanet" style = "width: 80%; font-size: 20pt; top:125px;">
+        <p>You scored {{ a }} out of 11. Below is a summary of the answers.</p>
+        <p style = "text-align:center;">Question 1: How many planets are in the Solar System?</p>
+        <ul class= "alignM" style = "text-align:left; font-size: 18pt">
+            <p><b>Your answer</b>{{ q1answer }}</p>
+            <p><b>Correct answer</b>8</p>
+        </ul>
+        <p style = "text-align:center;">Question 2: Which planet has the most moons?</p>
+        <ul class= "alignM" style = "text-align:left; font-size: 18pt">
+            <p><b>Your answer</b>{{ q2answer }}</p>
+            <p><b>Correct answer</b>Saturn</p>
+        </ul>
+        <p style = "text-align:center;">Question 3: What is the average temperature of Earth?</p>
+        <ul class= "alignM" style = "text-align:left; font-size: 18pt">
+            <p><b>Your answer</b>{{ q3answer }} &degC</p>
+            <p><b>Correct answer</b>14.9 &degC</p>
+        </ul>
+        <p style = "text-align:center;">Question 4: What are the names of Mars' two moons?</p>
+        <ul class= "alignM" style = "text-align:left; font-size: 18pt">
+            <p><b>Your answer</b>{{ q4answer }}</p>
+            <p><b>Correct answer</b>Phobos and Deimos</p>
+        </ul>
+        <p style = "text-align:center;">Question 5: What is a "sol day" in regards to the three Mars rovers?</p>
+        <ul class= "alignM" style = "text-align:left; font-size: 18pt">
+            <p><b>Your answer</b>{{ q5answer }}</p>
+            <p><b>Correct answer</b>Number of times Mars has completed a full rotation around its own axis since the rover landed</p>
+        </ul>
+        <p style = "text-align:center;">Question 6: Does Curiosity have a Miniature Thermal Emission Spectrometer?</p>
+        <ul class= "alignM" style = "text-align:left; font-size: 18pt">
+            <p><b>Your answer</b>{{ q6answer }}</p>
+            <p><b>Correct answer</b>No</p>
+        </ul>
+        <p style = "text-align:center;">Question 7: Which planet is closest to The Sun?</p>
+        <ul class= "alignM" style = "text-align:left; font-size: 18pt">
+            <p><b>Your answer</b>{{ q7answer }}</p>
+            <p><b>Correct answer</b>Mercury</p>
+        </ul>
+        <p style = "text-align:center;">Question 8: Which of these makes Venus stand out?</p>
+        <ul class= "alignM" style = "text-align:left; font-size: 18pt">
+            <p><b>Your answer</b>{{ q8answer }}</p>
+            <p><b>Correct answer</b>It is the hottest planet</p>
+        </ul>
+        <p style = "text-align:center;">Question 9: How many moons does Pluto have?</p>
+        <ul class= "alignM" style = "text-align:left; font-size: 18pt">
+            <p><b>Your answer</b>{{ q9answer }}</p>
+            <p><b>Correct answer</b>5</p>
+        </ul>
+        <p style = "text-align:center;">Question 10: What is the name of the rover from which weather data is generated?</p>
+        <ul class= "alignM" style = "text-align:left; font-size: 18pt">
+            <p><b>Your answer</b>{{ q10answer }}</p>
+            <p><b>Correct answer</b>InSight</p>
+        </ul>
+        <p style = "text-align:center;">Bonus question: What rating would you give this website? (out of 10)</p>
+        <ul class= "alignM" style = "text-align:left; font-size: 18pt">
+            <p><b>Your answer</b>{{ qbonusanswer }}</p>
+            <p><b>Correct answer</b>Any answer</p>
+        </ul>
+    </div>
+{% endblock %}

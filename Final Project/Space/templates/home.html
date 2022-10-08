@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+
+    <div class="box">
+            <form action="/planet" method="post">
+                <button type="submit" name = "planetname" value ="sun" style = "right: 1000px"><img alt="Sun" class = "Sun" style = "display: block" src="https://i.imgur.com/8sSunWe.png"></button>
+                <button type="submit" name = "planetname" value ="venus" style = "right: 1000px"><img alt="Venus" class = "Venus" src="https://i.imgur.com/AOL4xwu.png"></button>
+                <button type="submit" name = "planetname" value ="Mercury" style = "right: 1000px"><img alt="Mercury" class = "Mercury" src="https://i.imgur.com/7WxyM0B.png"></button>
+                <button type="submit" name = "planetname" value ="Earth" style = "right: 1000px"><img alt="Earth" class = "Earth" src="https://i.imgur.com/H6orFKh.png"></button>
+                <button type="submit" name = "planetname" value ="Mars" style = "right: 1000px"><img alt="Mars" class = "Mars" src="https://i.imgur.com/QuxVvmB.png"></button>
+                <button type="submit" name = "planetname" value ="Jupiter" style = "right: 1000px"><img alt="Jupiter" class = "Jupiter" src="https://i.imgur.com/dqtdYJC.png"></button>
+                <button type="submit" name = "planetname" value ="Saturn" style = "right: 1000px"><img alt="Saturn" class = "Saturn" src="https://i.imgur.com/1bRKZwf.png"></button>
+                <button type="submit" name = "planetname" value ="Uranus" style = "right: 1000px"><img alt="Uranus" class = "Uranus" src="https://i.imgur.com/YB4Kil1.png"></button>
+                <button type="submit" name = "planetname" value ="Neptune" style = "right: 1000px"><img alt="Neptune" class = "Neptune" src="https://i.imgur.com/xGnAfVf.png"></button>
+            </form>
+            <form action="/planet" method="post">
+                <button  type="submit" name = "planetname" value ="Pluto" style = "right: 1000px"><img alt="Pluto" class = "Pluto" src="https://i.imgur.com/b8hQMuU.png"></button>
+            </form>
+            <div class= "jumbotron">
+                <p id="text">Welcome to Our Solar System!</p>
+                <p id="text">8 planets, 1 dwarf planet, and 1 star await you. Please select a celestial body from the list below or click on one to the right. Feel free to explore any other areas of the website too.</p>
+            </div>
+            <form action="/planet" method="post" class="planet-form">
+                <div class="form-select">
+                    <select class="custom-select" style="width:150px;" name="planetname">
+                        <option value="sun">Sun</option>
+                        <option value="venus">Venus</option>
+                        <option value="mercury">Mercury</option>
+                        <option value="earth">Earth</option>
+                        <option value="mars">Mars</option>
+                        <option value="jupiter">Jupiter</option>
+                        <option value="saturn">Saturn</option>
+                        <option value="uranus">Uranus</option>
+                        <option value="neptune">Neptune</option>
+                        <option value="pluto">Pluto</option>
+                    </select>
+                </div>
+                <br>
+                <button class="btn btn-primary" type="submit">Let's go</button>
+            </form>
+    </div>
+
+
+{% endblock %}

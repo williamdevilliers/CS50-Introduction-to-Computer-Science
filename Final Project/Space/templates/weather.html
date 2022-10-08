@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Weather
+{% endblock %}
+
+{% block main %}
+            <div class= "jumbotronPlanet" style="top:100px;width:65%;">
+                <p>The information displayed below details the weather data on Mars for the current day.</p>
+            </div>
+            <div class= "jumbotronPlanet" style="width:65%;">
+                <ul class= "alignMe" style = "text-align:left;">
+                    <p><b>Average temperature</b>{{ avtemp }} &degC</p>
+                    <p><b>Maximum temperature</b>{{ maxtemp }} &degC</p>
+                    <p><b>Minimum temperature</b>{{ mintemp }} &degC</p>
+                    <p><b>Average horizontal wind speed</b>{{ avhws }} m/s</p>
+                    <p><b>Maximum horizontal wind speed</b>{{ maxhws }} m/s</p>
+                    <p><b>Minimum horizontal wind speed</b>{{ minhws }} m/s</p>
+                    <p><b>Average atmospheric pressure</b>{{ avpre }} Pa</p>
+                    <p><b>Maximum atmospheric pressure</b>{{ maxpre }} Pa</p>
+                    <p><b>Minimum atmospheric pressure</b>{{ minpre }} Pa</p>
+                    <p><b>Wind direction (compass shorthand)</b>{{ wd }}</p>
+
+            </div>
+
+{% endblock %}

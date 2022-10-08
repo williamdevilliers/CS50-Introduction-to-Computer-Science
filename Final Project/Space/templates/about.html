@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    About
+{% endblock %}
+
+{% block main %}
+    <div class= "jumbotronPlanet" style = "width: 60%; font-size: 20pt; top:125px; padding-left: 100px; padding-right: 100px; padding-top: 20px; text-align:left">
+        <p>This website is powered by three separate APIs. The primary celestial data (mass, volume, density, gravity, temperature etc.)
+        are provided by the Solar System OpenData API. The api can be accessed via the link provided:
+        <br>
+        <a href = "https://www.programmableweb.com/api/solar-system-opendata-rest-api-v101">Solar System OpenData API</a>
+        <br>
+        <br>
+        The images captured by the Mars rovers are provided by the Mars Rover Photos API. The api can be accessed via the link provided:
+        <br>
+        <a href = "https://www.programmableweb.com/api/nasa-mars-rover-photos-rest-api-v10">Mars Rover Photos API</a>
+        <br>
+        <br>
+        The weather data captured by the InSight rover is provided by the InSight: Mars Weather Service API. The api can be accessed via the link provided:
+        <br>
+        <a href = "https://www.programmableweb.com/api/nasa-insight-mars-weather-service-rest-api-v10">InSight: Mars Weather Service API</a>
+        <br>
+        <br>
+        This website is the creation born from the fascination of space and the love of coding. It serves as the final project in the CS50 computer science course through
+        Harvard University as well a potential tool for people to grow their interest in space.
+        </p>
+    </div>
+    <div class= "jumbotronPlanet" style = "width: 30%; font-size: 20pt; top:665px; right:100px; left: 1250px; padding-left: 100px; padding-right: 100px; padding-top: 20px; padding-bottom: 20px; text-align:left">
+        <p>Please feel free to email me your thoughts at williamdevilliers@gmail.com</p>
+    </div>
+    <img style = "position: relative; width: 50%; height: 50%; left: 560px; right: 100px; bottom: 0px;" src="https://i.imgur.com/tvg5mq5.jpg">
+{% endblock %}

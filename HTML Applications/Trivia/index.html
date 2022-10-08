@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        <script>    
+                    function function1() { 
+                    button1.style.backgroundColor = 'red';
+                    document.getElementById("1").innerHTML = "Incorrect";
+                    }
+                    function function2() { 
+                    button2.style.backgroundColor = 'red';
+                    document.getElementById("1").innerHTML = "Incorrect";
+                    }
+                    function function3() { 
+                    button3.style.backgroundColor = 'red';
+                    document.getElementById("1").innerHTML = "Incorrect";
+                    }
+                    function function4() { 
+                    button4.style.backgroundColor = 'green';
+                    document.getElementById("1").innerHTML = "Correct!";
+                    }
+                    function function5() { 
+                    button5.style.backgroundColor = 'red';
+                    document.getElementById("1").innerHTML = "Incorrect";
+                    }
+                    function free() { 
+                    let ans = document.querySelector('#input');
+                    if (ans.value === 'Sol') 
+                    {
+                        ans.style.backgroundColor = 'green';
+                        document.getElementById("ror").innerHTML = "Correct!";
+                    }
+                    else 
+                    {
+                        ans.style.backgroundColor = 'red';
+                        document.getElementById("ror").innerHTML = "Incorrect";
+                    }
+                    }
+                    
+            // TODO: Add code to check answers to questions
+
+        </script>
+
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>Which planet lies between Uranus and Jupiter?</h3>
+                <!-- TODO: Add multiple choice question here -->
+                <p id="1"></p>
+                <button id="button1" onclick="function1()">Pluto</button>
+                <button id="button2" onclick="function2()">Earth</button>
+                <button id="button3" onclick="function3()">Neptune</button>
+                <button id="button4" onclick="function4()">Saturn</button>
+                <button id="button5" onclick="function5()">Cygnus X-1</button>
+                <script>
+
+                </script>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>What is the Roman name for the Sun?</h3>
+                <p id="ror"></p>
+                <form onsubmit = "free(); return false;">
+                    <input autocomplete="off" autofocus id="input" placeholder="Answer" type="text">
+                    <input Value='Check Answer' type="submit">
+                </form>
+                <!-- TODO: Add free response question here -->
+
+            </div>
+
+        </div>
+    </body>
+</html>

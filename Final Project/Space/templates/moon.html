@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Moon
+{% endblock %}
+
+{% block main %}
+            <div class= "jumbotronPlanet" style = "position: absolute; width:50%;">
+                <ul class= "alignMe" style = "text-align:left;">
+                    <p><b>Mass</b>{{ mass }}x10<sup>{{ massExponent }}</sup> kg</p>
+                    <p><b>Semi-major axis</b>{{ semimajorAxis }} km</p>
+                    <p><b>Mean radius</b>{{ meanRadius }} km</p>
+                    <p><b>Sidereal orbital period</b>{{ sideralOrbit }} days</p>
+                    <p {% if discoveryDate|length == 0 %} class="moon-formoff" {% endif %}><b>Discovered by</b>{{ discoveredBy }}</p>
+                    <p {% if discoveryDate|length == 0 %} class="moon-formoff" {% endif %}><b>Discovery date</b>{{ discoveryDate }}</p>
+                </div>
+
+{% endblock %}
